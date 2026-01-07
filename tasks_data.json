@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "買い物",
+    "status": "complete",
+    "memo": "牛乳とパンを購入"
+  },
+  {
+    "id": 2,
+    "title": "レポート作成",
+    "status": "inprogress",
+    "memo": "Pythonの実装部分を完了"
+  },
+  {
+    "id": 3,
+    "title": "メール返信",
+    "status": "incomplete",
+    "memo": "クライアントからの質問に対応"
+  },
+  {
+    "id": 4,
+    "title": "会議準備",
+    "status": "incomplete",
+    "memo": "資料の作成"
+  }
+]
