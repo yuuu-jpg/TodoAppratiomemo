@@ -7,7 +7,7 @@
 <head>
     <%
         // セッション初期化：初回ロード時にJSONファイルからタスクリストを読み込む
-        List<Task> taskList = (List<Task>) session.getAttribute("taskList");
+        
         if (taskList == null) {
             taskList = TaskJsonExporter.importTasksFromJson();
             session.setAttribute("taskList", taskList);
@@ -160,7 +160,7 @@
         if (taskIdStr != null) {
             try {
                 taskId = Integer.parseInt(taskIdStr);
-                List<Task> taskList = (List<Task>) session.getAttribute("taskList");
+                taskList = (List<Task>) session.getAttribute("taskList");
                 if (taskList != null) {
                     for (Task task : taskList) {
                         if (task.getId() == taskId) {
