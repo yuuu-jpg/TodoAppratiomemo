@@ -5,14 +5,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <%
-        // セッション初期化：初回ロード時にJSONファイルからタスクリストを読み込む
-        
-        if (taskList == null) {
-            taskList = TaskJsonExporter.importTasksFromJson();
-            session.setAttribute("taskList", taskList);
-        }
-    %>
+<%
+    // セッション初期化：初回ロード時にJSONファイルからタスクリストを読み込む
+    List<Task> taskList = (List<Task>) session.getAttribute("taskList");
+    
+    if (taskList == null) {
+        taskList = TaskJsonExporter.importTasksFromJson();
+        session.setAttribute("taskList", taskList);
+    }
+%>
     <meta charset="UTF-8">
     <title>メモ編集 - TODOアプリ</title>
     <style>
